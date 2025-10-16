@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FocusMocus Web Screensaver</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom styles for the animated background -->
+    <style>
+        @keyframes slow-pan {
+            0% { background-position: 0% 0%; }
+            25% { background-position: 100% 0%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        .animate-slow-pan {
+            /* Make the background gradient much larger than the viewport */
+            background-size: 400% 400%;
+            /* Apply the slow-pan animation */
+            animation: slow-pan 30s ease infinite;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-900">
+    <!-- The root element where the React application will be mounted -->
+    <div id="root"></div>
+    <!-- The entry point script for the React application -->
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
